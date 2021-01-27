@@ -1,0 +1,219 @@
+.kalambury-header h1{
+	display: block;
+	
+	margin-left:15%;
+	font-size:calc(16px + 1vmin);
+	text-align: left;
+	font-weight: 400;
+
+}
+.kalambury-header h1 span{
+	margin-left:30px;
+}
+.gameScreen{
+	width: 90%;
+	margin-left:5%;
+
+	justify-content: center;
+	align-items: center;
+
+}
+
+.game-header{
+	font-weight: 600;	
+	text-transform: uppercase;
+	font-size:calc(15px + 1vmin);
+	
+	padding-left:13%;
+	padding-right: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+.game-header,.game-header1, .main-game, .main-game1, .messages, .players-list, .player{
+	background: rgba(20,13,25,0.9);
+}
+.game-container{
+	width: 100%;
+	margin-top:20px;
+	display: inline-block;
+	margin-bottom:50px;
+}
+.time-counter{
+	color:white;
+	min-width: 15%;
+	text-align: right;
+	display: inline;
+}
+.colors-panel{
+	width: 75%;
+	text-align: right;
+	display: inline-flex;
+	justify-content: flex-end;
+}
+
+.game-title{
+	text-align: left;
+}
+
+.players-list {
+width: calc(20% - 10px);
+float: left;
+height: 60vh;
+overflow-y: scroll;
+text-align: center;
+}
+.game-chat{
+	width: calc(25% - 10px);
+	float:right;
+	height: 60vh;
+	position: relative;
+	bottom:-10px;
+
+	
+}
+.messages{
+	height: 100%;
+	padding:30px 10px;
+	color:white;
+	overflow-y: scroll;
+	text-align: left;
+	
+}
+
+.color{
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	margin:10px;
+}
+.clear{
+	border:solid 1px white;
+	background: url('../assets/clear.png');
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+}
+
+.chat-input{
+background: rgba(20,13,25,0.9);
+border: solid 1px #ec3290;
+color: white;
+border-radius: 50px;
+width: calc(100% - 22px);
+font-size: calc(13px + 1vmin);
+padding: 5px 10px;
+position: absolute;
+bottom:-140px;
+left:0;
+min-height: 7%;
+
+}
+
+
+
+.userPanel{
+	
+	height: 25%;
+	display: inline-flex;
+	color: white;
+	font-weight: 500;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin:10px;
+
+}
+.userPanel *{
+	display: inline-block;
+}
+.userPanel img{
+	max-width: 100px;
+	width: 3vw;
+	float:left;
+}
+.userPanel p{
+	word-break: break-all;
+	width: 100%;
+	margin: 0 5px;
+	font-size:0.9em;
+	white-space: nowrap;
+overflow-x: hidden;
+overflow-y: hidden;
+text-overflow: ellipsis;
+}
+
+.userInfo{
+	display: inline-block;
+
+width: 100px;
+text-align: left;
+
+}
+.userPanel .removeUser{
+	width: 32px;
+	margin:10px;
+}
+h3{
+	text-transform: capitalize;
+}
+
+.game-header1{
+	font-weight: 400;	
+	text-transform: uppercase;
+	font-size:calc(12px + 1vmin);
+	width: 300px;
+	padding-left:5%;
+	padding-right: 5%;
+	display: inline-flex;
+	color:white;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+.player{
+	text-align: center;
+	background:  rgba(20,13,25,0.9);
+	margin:10px;
+	
+	}
+.top-container{
+	display: inline;
+	}
+	
+.main-game{
+	height: 60vh;
+	width:60vh;
+	margin-bottom: 10px;
+	margin-left : 10px;
+	position: fixed;
+    bottom: 0;
+}
+.game-container{
+	width: 100%;
+	margin-top:20px;
+	display: inline-block;
+	margin-bottom:50px;
+}
+
+.main-game1{
+	height: 60vh;
+	width:130vh;
+	margin-bottom: 100px;
+	margin-left : -30px;
+	position: fixed;
+    bottom: -30px;
+	left:7%;
+
+}
+.game-header, .main-game1, .messages{
+	background: rgba(20,13,25,0.9);
+}
+
+.main-game1{
+	    /* Full height */
+	/* Center and scale the image nicely */
+    background-position: center;
+	background-repeat: no-repeat;
+}

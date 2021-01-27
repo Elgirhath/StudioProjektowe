@@ -1,0 +1,190 @@
+.settings-container{
+	display: inline-flex;
+	flex-direction: column;
+	position: absolute;
+	height: 100%;
+	background: #4f1344;
+	z-index: 1000;
+	width: 100%;
+	left: 0;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	color:white;
+	text-transform: uppercase;
+}
+
+.settingsTitle{
+	color:white;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: calc( 24px + 1vmin);
+	display: inline-flex;
+}
+.settingsTile div{
+	display: inline-flex;
+	flex-direction: column;
+	width: 80%;
+
+}
+.settingsTile{
+	border-top:solid 1px white;
+	border-bottom:solid 1px white;
+	width:80%;
+	flex-direction: column;
+	padding:20px;
+	font-size: calc( 10px + 1vmin);
+	justify-content: center;
+	align-items: center;
+	display: inline-flex;
+
+}
+.settingsTile.vertical{
+	display: inline-flex;
+	flex-direction: row;
+}
+.settingsTile input{
+	background:#711058;
+	border:none;
+	padding:2px; 
+	font-size: calc(10px + 1vmin);	
+	color:white;
+	text-align: center;
+}
+.timeInput{
+	width:30px;
+
+}
+.settingsInput{
+	width: 75px;
+
+}
+.settingsTile label, .settingsTile p{
+	display: inline-flex;
+position: relative;
+margin: 10px;
+text-align: left;
+align-items: center;
+}
+.settingsTile label span, .settingsTile p span{
+	position: absolute;
+bottom: 0px;
+right: 0px;
+}
+.settings-container button{
+	background: transparent;
+	color:white;
+	text-transform: uppercase;
+	border:solid 1px #ec3290;
+	padding:10px 30px;
+	border-radius: 10px;
+	font-size: calc(12px + 1vmin);
+	margin:30px;
+	cursor: pointer;
+}
+.settings-container button:disabled{
+	margin-top:10px;
+}
+.settings-container button:hover:disabled{
+	background: transparent;
+	cursor:inherit;
+}
+.settings-container button:hover{
+	transition: ease .5s;
+	background: rgba(236,50,144,0.3);
+}
+input[type="radio"]{
+	display: none;
+}
+label.type {
+width: 100%;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+}
+.settingsTile span.settingsRadio {
+position: relative;
+width: 20px;
+height: 20px;
+border: solid white 2px;
+border-radius: 100%;
+margin: 5px;
+}
+.settingsTile span.settingsRadio.selected{
+	background: url('../assets/check.png') center;
+	background-size: 100%;
+
+
+}
+.settings-container h3{
+	text-transform: none;
+}
+p.error{
+	color:red;
+	font-weight: 600;
+	margin:5px;
+	display: inline-block;
+	border-top:0px;
+}
+
+.settingsPassword{
+	align-items: center;
+}
+
+.passwordInput {
+	width: 20em;
+}
+
+.publicTable{
+	display: none;
+}
+.settingsTile p span span.color-selector {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	position: relative;
+	margin:0 5px;
+}
+span.color-selector.white{
+	background: #00e1ea;
+}
+span.color-selector.black{
+	background: #e400f6;
+}
+span.color-selector.selected{
+	background-image:url('../assets/check.png');
+	background-size:100%;
+	background-position: center; 
+}
+
+@media screen and (max-width: 1400px){
+	.settingsTile{
+		padding:9px;
+	}
+}
+@media screen and (max-width: 900px){
+	.settingsTile{
+		font-size: 0.9em;
+	}
+	.settingsTitle{
+		font-size: 1.1em;
+	}
+	.settings-container button{
+		margin:10px;
+		font-size:1em;
+		padding:5px 15px;
+	}
+}
+@media screen and (max-height: 700px){
+	.settingsTile{
+		font-size: 0.9em;
+	}
+	.settingsTitle{
+		font-size: 1.1em;
+	}
+	.settings-container button{
+		margin:10px;
+		font-size:1em;
+		padding:5px 15px;
+	}
+}

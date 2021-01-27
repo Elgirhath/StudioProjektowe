@@ -37,7 +37,7 @@ namespace SpaceDuck.KalamburyGame
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
-                    builder => builder.WithOrigins("http://localhost:3000", "https://localhost:44305", "http://localhost:3030")
+                    builder => builder.SetIsOriginAllowed(_ => true)
                     .AllowAnyMethod()
                     .AllowAnyHeader().AllowCredentials());
             });
@@ -66,8 +66,6 @@ namespace SpaceDuck.KalamburyGame
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 

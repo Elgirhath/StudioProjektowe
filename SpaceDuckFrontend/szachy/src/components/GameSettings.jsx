@@ -80,7 +80,7 @@ class GameSettings extends React.Component{
 	
 	async createTable(){
 		try{
-			const fetchAddress = "https://" + window.location.hostname + ':' + address.chessBackendPort + address.room + '/' + this.state.color
+			const fetchAddress = "http://" + window.location.hostname + ':' + address.chessBackendPort + address.room + '/' + this.state.color
 			const response = await fetch(fetchAddress, {
 				method: 'POST',
 				headers: {
@@ -113,7 +113,9 @@ class GameSettings extends React.Component{
 	}
 
 	validate() {
-		if(this.state.minutes == 0){
+		if (this.state.minutes > 600) return false
+		if (this.state.minutes == 600) return this.state.seconds == 0
+		if (this.state.minutes == 0) {
 			return this.state.seconds>=10 && this.state.seconds<60
 		} else {
 			return this.state.seconds>=0 && this.state.seconds<60

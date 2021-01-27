@@ -22,7 +22,7 @@ class Table extends React.Component {
     async addToGame(){
         var user = cookies.get('user');
         try{
-            const response = await fetch('https://' + window.location.hostname + ':' + address.chessBackendPort+address.room+'/'+this.props.table.id+'/'+user.id+'/'+user.userName, {
+            const response = await fetch("http://" + window.location.hostname + ':' + address.chessBackendPort+address.room+'/'+this.props.table.id+'/'+user.id+'/'+user.userName, {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',

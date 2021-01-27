@@ -29,7 +29,7 @@ class DeleteAccount extends React.Component {
 
     handleSubmit(event) {
         this.state.id=cookies.get("user").id;
-          fetch('https://'+address.backendURL+address.userPath+this.state.id, {
+          fetch("http://"+address.backendURL+address.userPath+this.state.id, {
                         method: 'DELETE',
                         headers: {
                             'Accept': 'application/json',

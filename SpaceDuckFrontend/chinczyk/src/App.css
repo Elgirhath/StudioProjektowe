@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap');
+
+body{
+  background:linear-gradient(90deg, rgba(15,12,18,1) 0%, rgba(20,16,23,1) 50%, rgba(21,16,24,1) 100%);;
+}
+.app{
+  min-height: 100vh;
+  background-image: url('./assets/background.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  text-align: center;
+  align-items: center;
+  color:#ec3290;
+  font-family: 'Montserrat', sans-serif;
+}
+.app-header {
+  background-color:black;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  justify-content: center;
+}
+
+.app-header img{
+
+position: absolute;
+left: 5%;
+margin: 0;
+height: 5;
+padding: 0;
+bottom: 0;
+height: 60%;
+}
+
+.title{
+  display: flex;
+  background: rgba(0,0,0,0.5);
+  padding:10px;
+  font-size: calc(15px + 2vmin);
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; 
+}
+.title img {
+width: 5vw;
+margin: 0 10vw;
+}
+.title p {
+  display: inline-block;
+  margin:0;
+  padding:0;
+  text-align: right;
+}
+.header-button{
+  display: inline-block;
+  padding:5px 30px;
+  border: solid 1px #ec3290;
+  color:white;
+  background: transparent;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: calc(10px + 1vmin);
+  text-align: center;
+  min-width: 150px;
+  margin:10px;
+}
+.header-button:hover{
+  background: rgba(236,50,144, 0.6);
+  transition: ease .3s;
+  font-size: calc(10px + 1vmin);
+}
+.app-header .buttons-container{
+  position: absolute;
+  right:5%;
+  display: inline-flex;
+}
+.kalambury-header {
+  background: rgba(0,0,0,0.5);
+  padding: 5px;
+  font-size: calc(15px + 2vmin);
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+}
+

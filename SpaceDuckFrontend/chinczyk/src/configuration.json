@@ -1,0 +1,17 @@
+{
+	"backendURL":"localhost:5000",
+	"chineseURL": "localhost:5004",
+	"kalamburyURL":"localhost:5002",
+	"baseURL":"localhost",
+	"mainPort":"3000",
+	"kalamburyPort":"3030",
+	"szachyPort":"3040",
+	"chinesePort":"3050",
+	"statkiPort":"3060",
+	"room": "/chinese/api/room",
+	"userInfo": "/api/user/info",
+	"game": "/chinese/api/game",
+	"ranking": "/chinese/api/ranking",
+	"ranking2": "/kalambury/api/ranking"
+
+}

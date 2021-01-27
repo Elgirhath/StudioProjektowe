@@ -67,8 +67,6 @@ namespace SpaceDuck.ChessGame
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
             app.UseCors("CorsPolicy");

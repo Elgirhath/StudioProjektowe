@@ -47,7 +47,7 @@ class Szachy extends React.Component {
         return data;
     }
     componentDidMount(){
-        fetch("https://" + window.location.hostname+':'+address.chessBackendPort+address.ranking+"/top/5", {
+        fetch("http://" + window.location.hostname+':'+address.chessBackendPort+address.ranking+"/top/5", {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',
@@ -63,7 +63,7 @@ class Szachy extends React.Component {
                         it = it + 1;
                         this.state.ranking.push(arg);
 
-                        return fetch("https://" + window.location.hostname+':' + address.userserviceBackendPort + '/api/user/info/'+arg.userId, {
+                        return fetch("http://" + window.location.hostname+':' + address.userserviceBackendPort + '/api/user/info/'+arg.userId, {
                             method: 'GET',
                             headers: {
                                 'Accept': 'application/json',

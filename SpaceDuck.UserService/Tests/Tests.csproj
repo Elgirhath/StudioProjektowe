@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
+    <PackageReference Include="Moq" Version="4.14.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceDuck.UserService\SpaceDuck.UserService.csproj" />
+    <ProjectReference Include="..\SpaceDuck.KalamburyGame\SpaceDuck.KalamburyGame.csproj" />
+    <ProjectReference Include="..\SpaceDuck.Common\SpaceDuck.Common.csproj" />
+    <ProjectReference Include="..\SpaceDuck.ChessGame\SpaceDuck.ChessGame.csproj" />
+    <ProjectReference Include="..\SpaceDuck.StatkiGame\SpaceDuck.ShipsGame.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="ChessServiceTests\" />
+    <Folder Include="ChineseServiceTests\" />
+    <Folder Include="KalamburyServiceTests\" />
+    <Folder Include="ShipsServiceTests\" />
+    <Folder Include="UserServiceTests\" />
+  </ItemGroup>
+</Project>

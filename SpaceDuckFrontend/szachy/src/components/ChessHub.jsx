@@ -7,16 +7,17 @@ const cookies = new Cookies();
 class ChessHub {
 	static instance = null;
 
-	static getInstance() {
+	static async getInstance() {
 		if (this.instance == null) {
 			this.instance = new ChessHub();
+			await this.instance.init()
 		}
 		return this.instance;
 	}
 
 	async init() {
 		this.hubConnection = new signalR.HubConnectionBuilder()
-			.withUrl("https://" + window.location.hostname + ':' + address.chessBackendPort + "/chessHub")
+			.withUrl("http://" + window.location.hostname + ':' + address.chessBackendPort + "/chessHub")
 			.configureLogging(signalR.LogLevel.Information)  
 			.build();
 			

@@ -41,7 +41,7 @@ class EndGamePopup extends React.Component{
 				</div>
 				<div>
 					<button onClick={() => {this.props.handleEndGame();}}>zakończ</button>
-					<button onClick={() => {this.props.handleContinue();}}>zagraj raz jeszcze</button>
+					<button onClick={() => {this.props.handleContinue();}} disabled={this.props.playAgainDisabled}>zagraj raz jeszcze</button>
 				</div>
 			</div>
 			)

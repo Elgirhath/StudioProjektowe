@@ -20,7 +20,7 @@ class Table extends React.Component {
     async addToGame(){
         var user = cookies.get('user');
         try{
-            const response = await fetch('https://'+address.kalamburyURL+address.room+'/'+this.props.table.id+'/'+user.id+'/'+user.userName, {
+            const response = await fetch('http://'+ window.location.hostname+ ':'+address.kalamburyURL+address.room+'/'+this.props.table.id+'/'+user.id+'/'+user.userName, {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -38,7 +38,6 @@ class Table extends React.Component {
             }
 
             const json = await response.json();
-            console.log(json);
 		} catch(error){
 			this.setState({errorInfo: true});
 		}
@@ -54,6 +53,13 @@ class Table extends React.Component {
             return (
                 <button className="table-button" type="button">
                     <img src={watch} className="watch-table-image" alt="Watch table"/>
+                </button>
+            );
+        }
+        else if(this.props.roomConfiguration.isPrivate){
+            return(
+                <button className="table-button" type="button" onClick={(str) => this.props.passwordPopup(this.props.roomConfiguration.password)}>
+                    <img src={play} className="play-image" alt="play"/>
                 </button>
             );
         } else {

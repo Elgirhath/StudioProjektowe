@@ -1,0 +1,14 @@
+@media screen and (max-width: 1500px) {
+ .app-header {
+
+min-height: 65px;
+
+}
+.ticket{
+	font-size:0.9em;
+}
+.kalambury-header{
+	font-size: calc(13px + 2vmin);
+	padding:3px;
+}
+}

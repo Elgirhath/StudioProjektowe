@@ -50,9 +50,11 @@ namespace SpaceDuck.KalamburyGame.Server
         public void AddPlayer(string gameId, string playerId, string playerName)
         {
             var game = gameTasks.FirstOrDefault(g => g.Game.Room.Id.ToString() == gameId);
+            if (!(bool)game?.Game.PlayersPointsPerGame.ContainsKey(playerId))
+            {
+                game?.Game.PlayersPointsPerGame.Add(playerId, 0);
 
-            game?.Game.Room.Players.Add(new Player { Id = playerId, Name = playerName });
-            game?.Game.PlayersPointsPerGame.Add(playerId, 0);
+            }
         }
 
         public void RemovePlayer(string gameId, string playerId)

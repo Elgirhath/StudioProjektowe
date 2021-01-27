@@ -30,7 +30,7 @@ class Tables extends React.Component {
 
     componentDidMount(){
         cookies.set('currentTable', '', { path: '/' });
-        fetch('https://' + window.location.hostname + ':' + address.chessBackendPort + address.room + '/all')
+        fetch("http://" + window.location.hostname + ':' + address.chessBackendPort + address.room + '/all')
             .then((response) => response.json())
             .then(data => {
                 this.setState({tables: data});
@@ -44,7 +44,7 @@ class Tables extends React.Component {
     async addToGame(){
         var user = cookies.get('user');
         try{
-            const response = await fetch('https://' + window.location.hostname + ':' + address.chessBackendPort+address.room+'/'+this.state.table.id+'/'+user.id+'/'+user.userName, {
+            const response = await fetch("http://" + window.location.hostname + ':' + address.chessBackendPort+address.room+'/'+this.state.table.id+'/'+user.id+'/'+user.userName, {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',

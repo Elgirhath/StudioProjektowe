@@ -17,7 +17,6 @@ class EndGamePopup extends React.Component{
 			if(plrA.points > plrB.points) return -1;
 			return 0;
 		});
-		console.log(this.props.players);
 		return this.props.players;
 	}
 

@@ -1,0 +1,41 @@
+.pawn-container {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  background: transparent;
+
+  .border-purpule {
+    border: 1px solid #e400f6;
+  }
+
+  .border-yellow {
+    border: 1px solid #ffc865;
+  }
+
+  .border-green {
+    border: 1px solid #00ee32;
+  }
+
+  .border-blue {
+    border: 1px solid #00e1ea;
+  }
+
+  .background-purpule {
+    background: #e400f6;
+  }
+
+  .background-yellow {
+    background: #ffc865;
+  }
+
+  .background-green {
+    background: #00ee32;
+  }
+
+  .background-blue {
+    background: #00e1ea;
+  }
+
+}

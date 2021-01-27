@@ -41,7 +41,7 @@ class Register extends React.Component {
 
     handleSubmit(event) {
     
-        fetch('https://'+window.location.hostname + ":" + address.backendPort+address.register, {
+        fetch("http://"+window.location.hostname + ":" + address.backendPort+address.register, {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',

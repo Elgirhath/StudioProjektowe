@@ -1,0 +1,73 @@
+.tables {
+    margin-right: 250px;
+    margin-left: 2em;
+    min-width: 70vw;
+    color: white;
+}
+
+p {
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+}
+
+.kalambury-header {
+    background: rgba(0,0,0,0.5);
+    padding: 5px;
+    font-size: calc(15px + 2vmin);
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+li {
+    min-width: 10vw;
+}
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(236,50,144, 0.3);
+    padding: 0.5em;
+    border-style: solid;
+    margin: 1em;
+    border-color: rgba(43, 16, 30, 0.34);
+    border-width: 0.5em 0.8em;
+}
+
+.add-table{
+    position: fixed;
+    bottom: 0;
+    right: 2em;
+}
+
+.table-button {
+    border: none;
+    background: none;
+}
+
+.add-table-image{
+    width: 10em;
+    height: 10em;
+}
+
+.table-image{
+    width: 2em;
+}
+
+.play-image{
+    height: 2em;
+}
+
+.game-button{
+    color: rgba(0,0,0,0);
+}
+
+.players-names{
+    width: 10vw;
+}

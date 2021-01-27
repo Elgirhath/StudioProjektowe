@@ -1,7 +1,6 @@
 {
-	"backendURL":"localhost:5000",
-	"kalamburyURL":"localhost:5002",
-	"baseURL":"localhost",
+	"backendURL":"5000",
+	"kalamburyURL":"5002",
 	"mainPort":"3000",
 	"kalamburyPort":"3030",
 	"szachyPort":"3040",

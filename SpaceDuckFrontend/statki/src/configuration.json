@@ -1,0 +1,15 @@
+{
+    "userserviceBackendPort":"5000",
+    "shipsBackendPort":"5008",
+    "mainPort":"3000",
+    "kalamburyPort":"3030",
+    "szachyPort":"3040",
+    "chinczykPort":"3050",
+    "statkiPort":"3060",
+    "room": "/ships/api/room",
+    "userInfo": "/api/user/info",
+    "game": "/ships/api/game",
+    "ranking": "/ships/api/ranking",
+    "baseURL":"localhost"
+
+}

@@ -1,6 +1,6 @@
 {
 
-    "userserviceBackendPort":"5001",
+    "userserviceBackendPort":"5000",
     "chessBackendPort":"5006",
     "mainPort":"3000",
     "kalamburyPort":"3030",

@@ -36,17 +36,20 @@ namespace SpaceDuck.KalamburyGame.Services
             var room = await GetRoom(roomId);
 
             if (room.IsFull) return false;
-
-            room.Players.Add(new Player { Id = playerId, Name = playerName });
-
             gameHelper.AddPlayer(roomId.ToString(), playerId, playerName);
 
-            if (room.Players.Count == room.RoomConfiguration.NumberOfPlayers)
-                room.IsFull = true;
+            if (!room.PlayerIdsFlat.Contains(playerId))
+            {
+                room.Players.Add(new Player { Id = playerId, Name = playerName });
 
-            await SetRoom(room);
+                if (room.Players.Count == room.RoomConfiguration.NumberOfPlayers)
+                    room.IsFull = true;
 
-            return true;
+                await SetRoom(room);
+
+                return true;
+            }
+            return false;
         }
 
         public Room CreateRoom(RoomConfiguration roomConfiguration, GameType gameType)
@@ -107,7 +110,7 @@ namespace SpaceDuck.KalamburyGame.Services
         public async Task<bool> RemovePlayerFromRoom(int roomId, string playerId)
         {
             var room = await GetRoom(roomId);
-
+            if (room == null) return false;
             if (room.RoomConfiguration.PlayerOwnerId == playerId) return false;
 
             if (room.Players.FirstOrDefault(p => p.Id == playerId) == null) return false;

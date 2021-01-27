@@ -37,7 +37,7 @@ class Login extends React.Component {
        
        
     //calling backend
-      fetch('https://'+window.location.hostname + ":" + address.backendPort+address.login, {
+      fetch("http://"+window.location.hostname + ":" + address.backendPort+address.login, {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',
@@ -101,16 +101,16 @@ class Login extends React.Component {
         else if(this.state.logged == true){
             if(cookies.get('game')=="kalambury"){
 
-                 window.location.assign('http://'+address.baseURL+':'+address.kalamburyPort);
+                 window.location.assign('http://'+window.location.hostname+':'+address.kalamburyPort);
             }
             if(cookies.get('game')=="szachy"){
-                 window.location.assign('http://'+address.baseURL+':'+address.szachyPort);
+                 window.location.assign('http://'+window.location.hostname+':'+address.szachyPort);
             }
             if(cookies.get('game')=="statki"){
-                 window.location.assign('http://'+address.baseURL+':'+address.statkiPort);
+                 window.location.assign('http://'+window.location.hostname+':'+address.statkiPort);
             }
             if(cookies.get('game')=="chinczyk"){
-                 window.location.assign('http://'+address.baseURL+':'+address.chinczykPort);
+                 window.location.assign('http://'+window.location.hostname+':'+address.chinczykPort);
             }
         }
 

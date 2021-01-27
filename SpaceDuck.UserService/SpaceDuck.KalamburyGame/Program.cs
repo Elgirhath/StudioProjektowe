@@ -20,7 +20,7 @@ namespace SpaceDuck.KalamburyGame
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseUrls("https://localhost:5002", "https://localhost:5003");
+                    webBuilder.UseUrls("http://*:5002", "https://*:5003");
                     webBuilder.UseStartup<Startup>();
                 });
     }

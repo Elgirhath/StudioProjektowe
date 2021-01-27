@@ -1,7 +1,7 @@
 .piece-icon {
-    margin: 10%;
-    max-width: 80%;
-    max-height: 80%;
+    margin: 2.5%;
+    max-width: 95%;
+    max-height: 95%;
 }
 
 .board-outer {
@@ -38,7 +38,7 @@
 }
 
 .dark-square {
-    background-color: rgba(0,0,0,0.0);
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 /* EFFECTS */
@@ -58,5 +58,8 @@
 }
 
 .checked {
-    background-color: rgb(255, 50, 50, 1.0);
+    background-image: url("../assets/check_effect.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 90%;
 }

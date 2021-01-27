@@ -1,0 +1,185 @@
+.kalambury-header h1{
+	display: block;
+	
+	margin-left:15%;
+	font-size:calc(16px + 1vmin);
+	text-align: left;
+	font-weight: 400;
+
+}
+.kalambury-header h1 span{
+	margin-left:30px;
+}
+.gameScreen{
+	width: 90%;
+	margin-left:5%;
+
+	justify-content: center;
+	align-items: center;
+
+}
+
+.game-header{
+	font-weight: 600;	
+	text-transform: uppercase;
+	font-size:calc(15px + 1vmin);
+	
+	padding-left:13%;
+	padding-right: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+.game-header, .main-game, .messages{
+	background: rgba(20,13,25,0.9);
+}
+
+.main-game{
+	background: url('../assets/chinczyk_plansza.png');
+	    /* Full height */
+	/* Center and scale the image nicely */
+	background-position: 48% 55%;
+	background-repeat: no-repeat;
+	background-size: 75%;
+	height: 75vh;
+	width: 750px;
+}
+.pawns {
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	position: absolute;
+}
+.game-container{
+	width: 100%;
+	margin-top:20px;
+	display: inline-block;
+	margin-bottom:50px;
+}
+.time-counter{
+	color:white;
+	min-width: 15%;
+	text-align: right;
+	display: inline;
+}
+.colors-panel{
+	width: 75%;
+	text-align: right;
+	display: inline-flex;
+}
+
+.game-title{
+	text-align: left;
+}
+.main-game{
+	width: 650px;
+	float:left;
+	margin:0 10px ;
+	position: relative;
+}
+.players-list {
+	width: calc(20% - 10px);
+	float: right;
+	height: 35vh;
+	text-align: center;
+	background: rgba(20,13,25,0.9);
+}
+.game-chat{
+	width: calc(25% - 10px);
+	float:left;
+	height: 75vh;
+	position: relative;
+}
+.messages{
+	height: 75%;
+	padding:30px 10px;
+	color:white;
+	overflow-y: scroll;
+	text-align: left;
+}
+
+.color{
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	margin:10px;
+}
+.clear{
+	border:solid 1px white;
+	background: url('../assets/clear.png');
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+}
+
+.chat-input{
+	background: rgba(20,13,25,0.9);
+	border: solid 1px #ec3290;
+	color: white;
+	border-radius: 50px;
+	width: calc(100% - 22px);
+	font-size: calc(13px + 1vmin);
+	padding: 5px 10px;
+	position: absolute;
+	bottom:0;
+	left:0;
+	min-height: 7%;
+}
+
+
+.userPanel{
+	height: 25%;
+	display: inline-flex;
+	color: white;
+	font-weight: 500;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin:0px;
+}
+
+.userPanel *{
+	display: inline-block;
+}
+
+.userPanel img{
+	margin-left: 10px;
+	max-width: 100px;
+	width: 3vw;
+	float:left;
+}
+
+.userPanel p{
+	word-break: break-all;
+	width: 100%;
+	margin: 0 5px;
+	font-size:0.9em;
+	white-space: nowrap;
+overflow-x: hidden;
+overflow-y: hidden;
+text-overflow: ellipsis;
+}
+
+.userInfo{
+	display: inline-block;
+margin:10px;
+width: 100px;
+text-align: left;
+
+}
+.userPanel .removeUser{
+	width: 32px;
+	margin:10px;
+}
+.rectangle{
+	margin-left: 20px;
+	width: 17vw;
+	background: rgba(68, 30, 75, 0.7);
+	margin-top:10px;
+	height: 3vw;
+	display: inline-flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}

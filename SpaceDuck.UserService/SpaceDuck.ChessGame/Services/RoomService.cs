@@ -113,7 +113,7 @@ namespace SpaceDuck.ChessGame.Services
         {
             var room = await GetRoom(roomId);
 
-            if (room.RoomConfiguration.PlayerOwnerId == playerId) return false;
+            if (room == null || room.RoomConfiguration.PlayerOwnerId == playerId) return false;
 
             if (room.Players.FirstOrDefault(p => p.Id == playerId) == null) return false;
 

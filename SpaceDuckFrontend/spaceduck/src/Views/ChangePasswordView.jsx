@@ -46,7 +46,7 @@ class ChangePassword extends React.Component {
             this.state.name=cookies.get("user").userName;
             this.state.email=cookies.get("user").email;
             
-            fetch('https://'+address.backendURL+address.userPath+this.state.id, {
+            fetch("http://"+address.backendURL+address.userPath+this.state.id, {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',

@@ -33,7 +33,6 @@ namespace SpaceDuck.UserService
                     .AllowCredentials());
             });
 
-            //services.AddDbContext<ApplicationIdentityDbContext>(options => options.UseSqlServer(Configuration["Data:ApplicationIdentity:ConnectionString"]));
             services.AddDbContext<ApplicationIdentityDbContext>(options => options.UseMySql(Configuration["Data:ApplicationIdentityMySQL:ConnectionString"]));
 
             services.AddIdentity<User, IdentityRole>()
@@ -48,8 +47,6 @@ namespace SpaceDuck.UserService
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 

@@ -94,7 +94,7 @@ class GameSettings extends React.Component{
 	async createTable(){
 
 		try{
-			const response = await fetch('https://'+address.kalamburyURL+address.room, {
+			const response = await fetch('http://'+ window.location.hostname+ ':'+address.kalamburyURL+address.room, {
 				method: 'POST',
 				headers: {
 					'Accept': 'application/json',

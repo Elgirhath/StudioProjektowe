@@ -1,11 +1,19 @@
 {
-	"backendPort":"5001",
+	"backendPort":"5000",
 	"mainPort":"3000",
 	"kalamburyPort":"3030",
 	"szachyPort":"3040",
 	"chinczykPort":"3050",
 	"statkiPort":"3060",
+	"chessBackendPort":"5006",
+	"kalamburyBackendPort":"5002",
+	"chineseBackendPort":"5004",
+	"shipsBackendPort":"5008",
 	"register": "/api/user/register",
 	"login": "/api/user/login",
-	"userPath": "/api/user/user/"
+	"userPath": "/api/user/user/",
+	"chessRanking": "/chess/api/ranking",
+        "kalamburyRanking": "/kalambury/api/ranking",
+        "chineseRanking": "/chinese/api/ranking",
+        "shipsRanking": "/ships/api/ranking"
 }

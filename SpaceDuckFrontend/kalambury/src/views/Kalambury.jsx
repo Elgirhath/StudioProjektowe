@@ -25,9 +25,31 @@ class Kalambury extends React.Component {
        this.goToMainService = this.goToMainService.bind(this);
        this.saveGuestName  = this.saveGuestName.bind(this);      
 	}
+
+	async getUserInfo(userId) {
+        try{
+            const response = await fetch('http://'+ window.location.hostname+ ':'+'5000/api/user/info/'+userId, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json' 
+                }
+            });
+
+            if(!response.ok){
+                throw Error(response.statusText);
+            }
+
+			var data = await response.json();
+		} catch(error){
+			this.setState({errorInfo: true})
+		}
+		return data;
+	}
 	
+
 	componentDidMount(){
-		fetch('https://'+address.kalamburyURL+address.ranking+"/top/5", {
+		fetch('http://'+ window.location.hostname+ ':'+address.kalamburyURL+address.ranking+"/top/5", {
 				method: 'GET',
 				headers: {
 					'Accept': 'application/json',
@@ -37,13 +59,30 @@ class Kalambury extends React.Component {
 			.then(response => response.json())
 			.then(data => {
 				var it = 1;
-				data.map((arg) => {
-					arg.place = it;
-					it = it + 1;
-					this.state.ranking.push(arg);
+				Promise.all(
+					data.map((arg) => {
+						arg.place = it;
+						it = it + 1;
+						this.state.ranking.push(arg);
+
+						return fetch('http://'+ window.location.hostname+ ':'+'5000/api/user/info/'+arg.userId, {
+							method: 'GET',
+							headers: {
+								'Accept': 'application/json',
+								'Content-Type': 'application/json' 
+							}
+						});
+				}))
+				.then(response => Promise.all(response.map(r => r.json())))
+				.then(data => {
+					this.state.ranking.forEach(r => r.name = data.find(u => u.id == r.userId).userName);
+				})
+				.then(()=>{
+					this.setState({rankingLoaded: true});
+				})
+				.catch((error) => {
 				});
 			})
-			.then(()=>this.setState({rankingLoaded: true}))
 			.catch((error) => {
                 this.setState({errorInfo:true})
             });
@@ -51,7 +90,7 @@ class Kalambury extends React.Component {
 
 	getRanking(){
 		return  this.state.ranking.map(arg => 
-			<h3>{arg.place}. {arg.id}</h3>
+			<h3>{arg.place}. {arg.name}</h3>
 		)
 	}
 
@@ -73,7 +112,7 @@ class Kalambury extends React.Component {
     unLogged(){
     	return(
     		<div className="asGuest">
-    			<a href={"http://"+address.baseURL+":"+address.mainPort+"/login"} onClick={this.goToMainService} className="button inline-button"> Zaloguj </a>
+    			<a href={"http://"+ window.location.hostname+":"+address.mainPort+"/login"} onClick={this.goToMainService} className="button inline-button"> Zaloguj </a>
              	
     		</div>
     		)
